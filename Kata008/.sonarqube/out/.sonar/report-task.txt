@@ -1,0 +1,6 @@
+projectKey=kata008_lbass
+serverUrl=https://atinternalsonar.azurewebsites.net
+serverVersion=7.1.0.11001
+dashboardUrl=https://atinternalsonar.azurewebsites.net/dashboard/index/kata008_lbass
+ceTaskId=AWVjL3i73uwBRg1eGvLL
+ceTaskUrl=https://atinternalsonar.azurewebsites.net/api/ce/task?id=AWVjL3i73uwBRg1eGvLL

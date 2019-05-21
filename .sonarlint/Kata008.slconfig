@@ -1,0 +1,11 @@
+{
+  "ServerUri": "https://atinternalsonar.azurewebsites.net/",
+  "Organization": null,
+  "ProjectKey": "your.organization.Kata008",
+  "Profiles": {
+    "CSharp": {
+      "ProfileKey": "AWU_8C78WehN2pYwDzBn",
+      "ProfileTimestamp": "2018-08-15T19:33:49-04:00"
+    }
+  }
+}
