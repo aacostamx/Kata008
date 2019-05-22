@@ -1,5 +1,7 @@
 # Kata 008
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9102978f8b00401eabb71ab4f09ae736)](https://app.codacy.com/app/aacostamx/Kata008?utm_source=github.com&utm_medium=referral&utm_content=aacostamx/Kata008&utm_campaign=Badge_Grade_Dashboard)
+
 ## Summary
 Covers static Analysis of code and technical debt
 
