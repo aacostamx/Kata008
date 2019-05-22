@@ -1,7 +1,5 @@
-using System;
-using Xunit;
-using Kata008;
 using System.Threading.Tasks;
+using Xunit;
 
 namespace Kata008.Test
 {
