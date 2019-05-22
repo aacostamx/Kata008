@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System;
 using System.IO;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -14,11 +15,12 @@ namespace Kata008
             try
             {
                 string url = GetURL();
-                await GetCallAsync(url);
+                HttpStatusCode result = await GetCallAsync(url);
+                Console.WriteLine(result);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Console.WriteLine(ex.ToString());
+                Console.WriteLine($"Error calling web service");
             }
 
         }
@@ -34,10 +36,10 @@ namespace Kata008
             return config.GetSection("AppConfig").GetSection("url").Value;
         }
 
-        public static async Task GetCallAsync(string url)
+        public static async Task<HttpStatusCode> GetCallAsync(string url)
         {
             HttpResponseMessage result = await _client.GetAsync(url);
-            Console.WriteLine(result.StatusCode);
+            return result.StatusCode;
         }
     }
 }

@@ -1,15 +1,15 @@
+using System.Net;
 using System.Threading.Tasks;
 using Xunit;
 
 namespace Kata008.Test
 {
-    public class UnitTest1
+    public class KataTest
     {
         [Fact]
         public void Get_URL_from_App_Settings()
         {
             string url = Program.GetURL();
-
             Assert.NotNull(url);
         }
 
@@ -17,11 +17,12 @@ namespace Kata008.Test
         [Fact]
         public void Get_Call_Async()
         {
-            string url = "https://www.google.com";
+            string url = "http://aacosta.com.mx/";
 
-            Task result = Program.GetCallAsync(url);
+            Task<HttpStatusCode> task = Program.GetCallAsync(url);
 
-            Assert.NotNull(result);
+            Assert.NotNull(task);
+            Assert.Equal(HttpStatusCode.OK, task.Result);
         }
     }
 }
