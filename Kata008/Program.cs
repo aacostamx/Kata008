@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Net.Http;
@@ -15,12 +16,12 @@ namespace Kata008
             try
             {
                 string url = GetURL();
-                HttpStatusCode result = await GetCallAsync(url);
+                HttpStatusCode result = await GetCallAsync(url).ConfigureAwait(false);
                 Console.WriteLine(result);
             }
             catch (Exception)
             {
-                Console.WriteLine($"Error calling web service");
+                Trace.TraceError($"Error calling web service");
             }
 
         }
